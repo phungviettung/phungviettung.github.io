@@ -1,0 +1,383 @@
+/*<-----------------------------------3.1 Home_page_content--------------------------------------------->*/
+.container__home-page {
+    width : @content-wight;
+    margin: auto
+}
+
+.slogan {
+    background-color: @burger-color ;
+    border-bottom   : 0.01px solid @boder-color-slogan;
+    text-align      : center
+}
+
+.slogan__item {
+    .flex();
+    flex-direction: column;
+    .flex-align-items(center);
+    border: 0.01px solid @boder-color-slogan;
+}
+
+.slogan__item-title {
+    .font-stylized();
+    font-size     : 1.8rem;
+    font-weight   : 700;
+    text-transform: uppercase;
+    font-weight   : bold;
+    line-height   : 2.8rem;
+    letter-spacing: 0.2rem;
+    color         : @color-button
+}
+
+
+.slogan__item-detail {
+    font-weight: 400;
+    .font-common();
+    font-size  : 1.4rem;
+    line-height: 2.8rem;
+    color      : @color-slogan-detail;
+}
+
+.preamble__main {
+    font-size  : 3.4rem;
+    line-height: 4.8rem;
+    color      : @color-button;
+    font-weight: 600;
+    .font-stylized();
+    text-align: center;
+    .flex();
+    .flex-justify-content(center);
+    margin: @margin-between-block ;
+}
+
+/*
+*feature items 
+*/
+.feature__items {
+    width        : @content-wight-fuild;
+    margin       : 0 auto;
+    margin-bottom: @margin-between-block;
+
+    .container-fluid {
+        flex-wrap: wrap;
+
+        .feature__item-img--small,
+        .feature__item-img--big {
+            transition: transform 0.5s;
+
+            &:hover {
+                transform: scale(0.9);
+            }
+        }
+    }
+
+}
+
+.feature__item-img--big {
+    @media (max-width: 576px) {
+        order: -1
+    }
+
+    @media (max-width: 768px) {
+        order: -1
+    }
+
+    @media (max-width: 992px) {
+        order: -1
+    }
+
+}
+
+
+/*
+*feature product 
+*/
+
+.feature__product-content-title {
+    .flex();
+    .flex-justify-content(space-between);
+    margin-bottom: @margin-between-block-less;
+    font-size    : 5.6rem;
+    line-height  : 2.8rem;
+    color        : @color-button ;
+    font-weight  : 700;
+    .font-stylized();
+
+    .fi {
+        font-size: 5.6rem;
+        .font-stylized();
+        font-weight: bold;
+        line-height: 2.8rem;
+    }
+
+    .vm {
+        font-size     : 14px;
+        letter-spacing: 0.2rem;
+        color         : @color-button ;
+        font-weight   : 700;
+        font-size     : 1.4rem;
+        .font-common();
+        line-height   : 2.4rem;
+        text-transform: uppercase;
+        .linkStyle()
+    }
+
+    .vm>.iconify {
+        color: @color-common;
+    }
+}
+
+
+
+.product__content {
+    position: relative;
+
+    .bottom__menu {
+
+        width   : 100%;
+        position: relative;
+        .flex();
+        .flex-justify-content(space-between);
+        opacity: 0;
+
+        .add__to-cart {
+            background-color: @color-common;
+            width           : 50%;
+            text-transform  : uppercase;
+            .flex();
+            .flex-justify-content(center);
+            .flex-align-items(center);
+            margin: 0 0.1rem;
+        }
+
+        .icon() {
+            width           : 100%/3;
+            background-color: @color-button;
+            color           : @burger-color;
+            .flex();
+            .flex-justify-content(center);
+            .flex-align-items(center);
+            opacity: 0.9;
+            margin: 0 0.1rem;
+        }
+
+        .right-menu {
+            width: 50%;
+            .flex();
+
+            .whishlist {
+                .icon()
+            }
+
+            .compare {
+                .icon()
+            }
+
+            .quick__view {
+                .icon()
+            }
+        }
+    }
+
+    &:hover {
+        .carousel-control-prev-icon {
+            background: url('https://api.iconify.design/dashicons:arrow-left-alt2.svg') no-repeat center center / contain;
+            transition: 0.5s;
+        }
+
+        .carousel-control-next-icon {
+            background: url('https://api.iconify.design/dashicons:arrow-right-alt2.svg') no-repeat center center / contain;
+        }
+
+        .bottom__menu {
+            height       : 50%;
+            position     : absolute;
+            top          : -50%;
+            opacity      : 1;
+            // transition:  1s;
+        }
+    }
+
+
+    .product__content_title-text {
+        position: relative;
+    }
+
+    .product__content_title {
+        letter-spacing: 0.1rem;
+        color         : @color-button;
+        font-weight   : 400;
+        text-align    : center;
+        .font-common();
+        color      : #333333;
+        font-size  : 1.4rem;
+        line-height: 3.6rem;
+    }
+
+    .product__content_price {
+        .flex();
+        .flex-justify-content(center);
+        .font-stylized();
+        letter-spacing: 0.1rem;
+        color         : #d6ba8d;
+        font-weight   : 700;
+        text-align    : center;
+        font-size     : 1.8rem;
+        line-height   : 3.6rem;
+    }
+
+}
+
+
+.icon__direction {
+    background-image: url("/assets/images/16-home-jewelry-v2_01.jpg");
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.view__product {
+    position        : fixed;
+    bottom          : 5rem;
+    top             : 5rem;
+    right           : 5rem;
+    left            : 5rem;
+    background-color: blueviolet;
+    z-index         : 600;
+}
+
+//blog update
+.blog__update {
+    .blog__update-title {
+
+        color      : @color-button ;
+        font-weight: 700;
+
+        text-align: center;
+        margin    : @margin-between-block-less;
+        font-size : 5.6rem;
+        .font-stylized();
+        line-height: 2.8rem;
+    }
+
+    @magin-blog: 2rem;
+
+    .blog__content {
+        .blog__content_des {
+            .flex();
+            flex-direction: column;
+            .flex-justify-content(space-between);
+
+            .blog__content_des-date {
+                font-size     : 14px;
+                color         : @color-blog-date;
+                font-size     : 1.4rem;
+                letter-spacing: 0.1rem;
+                .font-common();
+                line-height: 2.4rem;
+                margin     : @magin-blog 0;
+            }
+
+            .blog__content_des-title {
+                letter-spacing: 0.1rem;
+                color         : @color-button;
+                font-weight   : 700;
+                font-weight   : bold;
+                font-size     : 2.4rem;
+                .font-stylized();
+                line-height  : 3.2rem;
+                margin-bottom: @magin-blog*2;
+                .linkStyle();
+            }
+        }
+
+        .blog__content-line {
+            width           : 80%;
+            height          : 0.1rem;
+            background-color: #eeeeee;
+            margin          : auto;
+            opacity         : 0.3;
+        }
+
+        .blog__content_des-social {
+            .flex();
+            font-size: 1.4rem;
+            .font-common();
+            font-weight: bold;
+            line-height: 3.2rem;
+            margin     : @magin-blog;
+
+            .blog__content_des-social-view,
+            .blog__content_des-social-like> {
+                font-size  : 1.4rem;
+                line-height: 3.2rem;
+                color      : @color-menu;
+                font-weight: 400;
+                .font-common();
+                // margin-right: 1rem;
+            }
+
+            .blog__content_des-social-view>.iconify {
+                color: @color-like-view
+            }
+
+            .blog__content_des-social-like>.iconify {
+                color: @color-like-view
+            }
+        }
+    }
+
+    // }
+
+    .blog__update-redirect {
+        text-align   : center;
+        margin-top   : @margin-between-block-less;
+        margin-bottom: @margin-between-block;
+        font-size    : 2.4rem;
+        .font-stylized();
+        line-height: 2.8rem;
+
+        .blog__update-redirect-link {
+            color          : @color-button;
+            text-decoration: none
+        }
+
+    }
+}
+
+//brand 
+.brand {
+    .brand__content-item {
+        opacity   : 0.5;
+        transition: transform 1s;
+        padding: 2rem ;
+        
+        &:hover {
+            transform: scale(1.2);
+            opacity  : 1;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    @margin-common-left-right : @margin-container/6;
+
+    .social {
+        display: none;
+    }
+
+    .container__home-page {
+        border: 3px solid yellow;
+        width : 100%;
+    }
+
+    .preamble__main {
+        font-weight: 300;
+        text-align: center;
+        .flex();
+        .flex-justify-content(center);
+        margin: @margin-between-block/5 0;
+    } 
+}

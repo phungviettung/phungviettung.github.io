@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,300;1,200&display=swap');
+
+@margin-container            : 5.2083vh;
+@height-banner               : 100vh;
+// @height-nav               : 8vh;
+// @height-slider            : @height-banner - @height-nav;
+@color-button                : #333333;
+@burger-width                : 3rem;
+@burger-height               : 0.1rem;
+@burger-color                : #ffffff;
+@color-common                : rgb(214, 186, 141);
+@color-menu                  : #696969;
+@content-wight               : 62.5vw;
+@margin-between-block        : 14vh;
+@margin-between-block-less   : 8vh;
+@content-wight-fuild         : 89.5vw;
+@boder-color-slogan          : #efefef;
+@color-slogan-detail         : #ababab;
+@color-blog-date             : #cccccc;
+@color-like-view             : #92c5d9;
+@line-footer                 : #242424;
+
+.font-common {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.font-stylized {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+
+.flex (@flex: flex) {
+    display: @flex;
+}
+
+.flex-justify-content (@justify-content: start) {
+    justify-content: @justify-content;
+}
+
+.flex-align-items (@align-item: stretch) {
+    align-items: @align-item;
+}
+
+.reset {
+    margin    : 0px;
+    padding   : 0px;
+    box-sizing: border-box;
+}
+
+.marginCommon {
+    margin: auto @margin-container;
+}
+
+.listStyle {
+    list-style: none;
+}
+
+.linkStyle {
+    text-decoration: none;
+    color          : @color-menu;
+
+    &:hover {
+        text-decoration: none;
+        color          : @color-common;
+    }
+}
+
+.btnDis {
+    background-color: @color-button;
+    width           : 19.7rem;
+    height          : 4.8rem;
+}
+
+/*
+* Start CSS header
+*/
+
+* {
+    .reset();
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+.header {
+    width              : 100%;
+    height             : 100vh;
+    background-image   : url("/assets/images/16-home-jewelry-v2_01.jpg");
+    background-position: center;
+    background-repeat  : no-repeat;
+    background-size    : cover;
+
+    .nav {
+        width   : 100%;
+        position: fixed;
+        z-index : 1000;
+        .flex();
+        .flex-justify-content(center);
+
+        .nav-bar {
+            width      : @content-wight-fuild;
+            padding-top: 2rem;
+            .flex();
+            .flex-justify-content(space-between);
+            .flex-align-items(center);
+        }
+    }
+
+    .header__container {
+        width   : @content-wight-fuild ;
+        position: relative;
+
+        .container-fluid {
+            position: relative;
+        }
+    }
+}
+
+.logo {
+    img {
+        width : 175px;
+        height: 60px;
+    }
+}
+
+
+
+
+
+.back {
+    background-color: @color-button;
+    opacity         : 0.8;
+    z-index         : 300;
+}
+
+.header__navbar-list {
+    .flex();
+    .flex-justify-content(space-around);
+    width: 50%;
+
+    li {
+        .listStyle();
+    }
+
+    a {
+        .linkStyle();
+        font-size: 5vh;
+    }
+}
+
+
+
+/*
+* Start navbar animation
+*/
+.burger div {
+    width           : @burger-width;
+    height          : @burger-height;
+    background-color: @burger-color;
+    margin          : 0.5rem 0;
+}
+
+
+.header__navbar-list {
+    position        : fixed;
+    right           : -50vw;
+    height          : 100vh;
+    top             : 0px;
+    background-color: @burger-color;
+    font-weight     : bold;
+    .font-common();
+    text-transform: uppercase;
+    opacity       : 0.95;
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    width         : 50vw;
+    transform     : translateX(100%);
+    transition    : transform 0.5s ease-in;
+}
+
+.header__navbar-list-active {
+    right     : 50%;
+    transition: 1s;
+    z-index   : 1000;
+}
+
+.over__opacity-black {
+    position        : fixed;
+    background-color: @color-button ;
+    top             : 0px;
+    bottom          : 0;
+    width           : 100%;
+    height          : 100%;
+    z-index         : 500;
+    opacity         : 0.8;
+}
+
+
+.burger {
+    // display: block;
+    cursor    : pointer;
+    // z-index: 500;
+}
+
+/*
+* End navbar animation
+*/
+
+/*
+* Start CSS icon 
+*/
+.sign__icon {
+    .flex();
+    .flex-justify-content(space-between);
+    .flex-align-items(center);
+
+    .checkout__icon {
+        margin-right: 2.5rem;
+        color       : @burger-color;
+        font-size   : 2.5rem;
+        position    : relative;
+    }
+
+    .cart_nu_count {
+        position        : absolute;
+        top             : -1rem;
+        right           : -1.3rem;
+        background-color: @burger-color;
+        border-radius   : 50%;
+        font-size       : 1.5rem;
+        color           : @color-button;
+        text-align      : center;
+        width           : 2rem;
+        height          : 2rem;
+        font-family     : lato;
+    }
+}
+
+/*
+* End CSS icon 
+*/
+
+/*
+* Start CSS slider
+*/
+.slider {
+    height: 100vh;
+    .flex();
+    .flex-justify-content(center);
+    .flex-align-items(center);
+}
+
+
+.seasion {
+    font-size: 2.4rem;
+    .font-common;
+    line-height   : 3.2rem;
+    letter-spacing: 1.2rem;
+    font-weight   : 400;
+    color         : @color-menu ;
+}
+
+
+.slider__caption {
+    .font-stylized();
+    font-size     : 9.7rem;
+    line-height   : 10rem;
+    letter-spacing: 3rem;
+    font-weight   : 600;
+    font-style    : italic;
+    color         : @color-button;
+    margin        : 2rem 0rem 3rem 0rem;
+}
+
+.button_discover {
+    font-size     : 1.6rem;
+    letter-spacing: 0.2rem;
+    color         : @burger-color;
+    font-weight   : 700;
+    text-transform: uppercase;
+    .btnDis();
+    .font-common;
+}
+
+.social {
+    text-align: end;
+    position  : absolute;
+    right     : 15px;
+    .font-stylized();
+    font-size: 2.4rem;
+
+    line-height   : 4rem;
+    letter-spacing: 0.2rem;
+    font-weight   : 500;
+
+    li {
+        .listStyle()
+    }
+
+    a {
+        .linkStyle();
+        color: @burger-color;
+    }
+
+    a:hover {
+        font-size : 120%;
+        transition: 0.5s;
+    }
+}
+
+/*
+* End CSS slider
+*/
+
+/*
+* End CSS header
+*/
+
+
+
+//magrin 
+
+
+
+/*
+* Reponsive 
+*/
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 40%;
+    }
+
+    .logo {
+        img {
+            width : 175/2px;
+            height: 60/2px;
+        }
+    }
+
+    .slider__caption {
+        .font-stylized();
+        font-size     : 6rem;
+        line-height   : 9rem;
+        letter-spacing: 1rem;
+        font-weight   : 300;
+    }
+
+}
+
+
+//lafm laij
