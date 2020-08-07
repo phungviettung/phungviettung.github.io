@@ -1,25 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,300;1,200&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 
-@margin-container            : 5.2083vh;
-@height-banner               : 100vh;
-// @height-nav               : 8vh;
-// @height-slider            : @height-banner - @height-nav;
-@color-button                : #333333;
-@burger-width                : 3rem;
-@burger-height               : 0.1rem;
-@burger-color                : #ffffff;
-@color-common                : rgb(214, 186, 141);
-@color-menu                  : #696969;
-@content-wight               : 62.5vw;
-@margin-between-block        : 14vh;
-@margin-between-block-less   : 8vh;
-@content-wight-fuild         : 89.5vw;
-@boder-color-slogan          : #efefef;
-@color-slogan-detail         : #ababab;
-@color-blog-date             : #cccccc;
-@color-like-view             : #92c5d9;
-@line-footer                 : #242424;
+@margin-container          : 5.2083vh;
+@height-banner             : 100vh;
+@color-button              : #333333;
+@burger-width              : 3rem;
+@burger-height             : 0.1rem;
+@burger-color              : #ffffff;
+@color-common              : #d6ba8d;
+@color-menu                : #696969;
+@content-wight             : 62.5vw;
+@margin-between-block      : 14vh;
+@margin-between-block-less : 8vh;
+@content-wight-fuild       : 89.5vw;
+@boder-color-slogan        : #efefef;
+@color-slogan-detail       : #ababab;
+@color-blog-date           : #cccccc;
+@color-like-view           : #92c5d9;
+@line-footer               : #242424;
+
+.wapper {
+    background-color: #faf9f9;
+}
 
 .font-common {
     font-family: 'Fira Sans', sans-serif;
@@ -87,13 +90,15 @@ html {
 
 .header {
     width              : 100%;
-    height             : 100vh;
+    height             : 93vh;
     background-image   : url("/assets/images/16-home-jewelry-v2_01.jpg");
     background-position: center;
     background-repeat  : no-repeat;
     background-size    : cover;
+    margin-bottom      : 1.2rem;
 
     .nav {
+        height  : 10vh;
         width   : 100%;
         position: fixed;
         z-index : 1000;
@@ -101,28 +106,58 @@ html {
         .flex-justify-content(center);
 
         .nav-bar {
-            width      : @content-wight-fuild;
-            padding-top: 2rem;
+            position: relative;
+            width   : @content-wight-fuild;
             .flex();
             .flex-justify-content(space-between);
             .flex-align-items(center);
+
+            .logo {
+                position: absolute;
+                left    : -1rem;
+                top     : 3rem;
+            }
+
+            .sign__icon {
+                .flex();
+                .flex-justify-content(space-between);
+                .flex-align-items(center);
+                position: absolute;
+                right   : 1rem;
+
+                .checkout__icon {
+                    margin-right: 4.7rem;
+                    margin-top  : 1.1rem;
+                    color       : @burger-color;
+                    font-size   : 2.5rem;
+                    position    : relative;
+                }
+
+                .cart_nu_count {
+                    position        : absolute;
+                    top             : -1rem;
+                    right           : -1.3rem;
+                    background-color: @burger-color;
+                    border-radius   : 50%;
+                    font-size       : 1.5rem;
+                    color           : @color-button;
+                    text-align      : center;
+                    width           : 2rem;
+                    height          : 2rem;
+                    font-family     : lato;
+                }
+            }
         }
     }
 
     .header__container {
-        width   : @content-wight-fuild ;
+        height  : 100%;
+        width   : 100%;
         position: relative;
 
         .container-fluid {
             position: relative;
         }
-    }
-}
-
-.logo {
-    img {
-        width : 175px;
-        height: 60px;
     }
 }
 
@@ -153,11 +188,12 @@ html {
 
 
 
+        // width: 100%;
 /*
 * Start navbar animation
 */
 .burger div {
-    width           : @burger-width;
+    width           : 2rem;
     height          : @burger-height;
     background-color: @burger-color;
     margin          : 0.5rem 0;
@@ -201,9 +237,7 @@ html {
 
 
 .burger {
-    // display: block;
     cursor    : pointer;
-    // z-index: 500;
 }
 
 /*
@@ -211,47 +245,20 @@ html {
 */
 
 /*
-* Start CSS icon 
-*/
-.sign__icon {
-    .flex();
-    .flex-justify-content(space-between);
-    .flex-align-items(center);
-
-    .checkout__icon {
-        margin-right: 2.5rem;
-        color       : @burger-color;
-        font-size   : 2.5rem;
-        position    : relative;
-    }
-
-    .cart_nu_count {
-        position        : absolute;
-        top             : -1rem;
-        right           : -1.3rem;
-        background-color: @burger-color;
-        border-radius   : 50%;
-        font-size       : 1.5rem;
-        color           : @color-button;
-        text-align      : center;
-        width           : 2rem;
-        height          : 2rem;
-        font-family     : lato;
-    }
-}
-
-/*
-* End CSS icon 
-*/
-
-/*
 * Start CSS slider
 */
 .slider {
-    height: 100vh;
+    height: 100%;
     .flex();
     .flex-justify-content(center);
     .flex-align-items(center);
+    position: relative;
+
+    .slider__content {
+        position: absolute;
+        top     : 34.1rem;
+        left    : -1.5rem;
+    }
 }
 
 
@@ -260,20 +267,19 @@ html {
     .font-common;
     line-height   : 3.2rem;
     letter-spacing: 1.2rem;
-    font-weight   : 400;
     color         : @color-menu ;
+    margin-bottom : 3.5rem;
 }
 
 
 .slider__caption {
-    .font-stylized();
-    font-size     : 9.5rem;
-    line-height   : 10rem;
-    letter-spacing: 3rem;
-    font-weight   : 600;
+    font-size     : 10rem;
     font-style    : italic;
+    letter-spacing: 3rem;
+    line-height   : 10rem;
     color         : @color-button;
-    margin        : 2rem 0rem 3rem 0rem;
+    .font-stylized();
+    margin-bottom: 5.4rem;
 }
 
 .button_discover {
@@ -289,10 +295,10 @@ html {
 .social {
     text-align: end;
     position  : absolute;
-    right     : 15px;
+    right     : -28.9rem;
+    top       : 42.2rem;
     .font-stylized();
-    font-size: 2.4rem;
-
+    font-size     : 2.4rem;
     line-height   : 4rem;
     letter-spacing: 0.2rem;
     font-weight   : 500;
@@ -321,36 +327,57 @@ html {
 */
 
 
-
-//magrin 
-
-
-
 /*
 * Reponsive 
 */
 
-@media screen and (max-width: 768px) {
-    html {
-        font-size: 40%;
+@media screen and (max-width: 1919px) {
+
+    .slider .slider__content {
+        top: 20rem;
     }
 
-    .logo {
-        img {
-            width : 175/2px;
-            height: 60/2px;
+    .social {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .slider .slider__content {
+        left    : 3.5rem;
+        top     : 25rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .row {
+        margin-left : 0px;
+        margin-right: 0px;
+    }
+
+    html {
+        font-size: 30%;
+    }
+
+    .header .nav .nav-bar .sign__icon {
+        .checkout__icon {
+            font-size: 4rem;
+        }
+
+        .burger div {
+            width           : 5rem;
+            height          : 2px;
+            background-color: @burger-color;
+            margin          : 4px 0;
         }
     }
 
-    .slider__caption {
-        .font-stylized();
-        font-size     : 6rem;
-        line-height   : 9rem;
-        letter-spacing: 1rem;
-        font-weight   : 300;
+    .slider .slider__content {
+        left: 10rem;
+        top : 35rem;
     }
 
+    .slider__caption {
+        letter-spacing: 1rem;
+    }
 }
-
-
-//lafm laij

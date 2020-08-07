@@ -1,11 +1,24 @@
+.space-padding {
+    padding-top  : 3rem;
+    margin-bottom: 6.5rem;
+}
+
 .footer {
     background-color: @color-button ;
+
+    .footer__wapper {
+        height: 100%;
+    }
+}
+
+.margin-line {
+    margin-bottom: 4rem;
 }
 
 .footer__content_top-menu {
     .flex();
     .flex-justify-content(center);
-    .flex-align-items(end);
+    .flex-align-items(flex-end);
 
     .footer__content_top-menu-list {
         .listStyle();
@@ -18,7 +31,7 @@
         .flex-justify-content(center);
 
         .footer__content_top-menu-item {
-            margin: 0 1rem;
+            margin: 0 1.8rem;
             .linkStyle();
             text-transform: uppercase;
 
@@ -27,9 +40,8 @@
 }
 
 .footer__content_top-subscrice {
-    width : 90%;
-    height: 30%;
-
+    width    : 80%;
+    height   : 28%;
     border   : 0.1rem solid @color-menu ;
     font-size: 1.4rem;
     .font-common();
@@ -37,7 +49,6 @@
     line-height      : 2.4rem;
     letter-spacing   : 0.2rem;
     color            : @color-slogan-detail;
-    // letter-spacing: 150;
     .flex();
     .flex-justify-content(center);
     .flex-align-items(center);
@@ -62,10 +73,13 @@
 }
 
 .wapper__span {
-    font-size: 1.8rem;
-    width    : 3rem;
-    height   : 3rem;
-    color    : @color-slogan-detail;
+    font-size    : 2rem;
+    width        : 4.5rem;
+    height       : 4.5rem;
+    color        : @color-slogan-detail;
+    border       : 1px solid;
+    border-radius: 50%;
+    margin       : 5px;
     .flex();
     .flex-justify-content(center);
     .flex-align-items(center);
@@ -82,16 +96,38 @@
 }
 
 .footer__line {
-    width           : 100%; 
+    width           : 100%;
     height          : 0.1rem;
     background-color: @line-footer;
 }
 
+.footer__content_bottom-social {
+    top: -15px;
+}
+
+.footer__content_top-subscrice-icon {
+    font-size  : 20px;
+    margin-left: 10px;
+    color      : @color-common;
+}
+
+.footer__end{
+    height: 7vh;
+}
+
+
+@media screen and (max-width: 1199px) {
+    .footer__content_top-subscrice {
+        width : 100%;
+        height: 100%;
+    }
+}
 
 
 @media screen and (max-width: 768px) {
-    .footer__content_top-subscrice{
+    .footer__content_top-subscrice {
+        width : 100%;
         height: 100%;
     }
-
+    
 }

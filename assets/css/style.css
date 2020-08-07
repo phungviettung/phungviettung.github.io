@@ -15,31 +15,27 @@
 */
 @font-face {
   font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Cormorant Garamond SemiBold Italic'), local('CormorantGaramond-SemiBoldItalic'), url(https://fonts.gstatic.com/s/cormorantgaramond/v7/co3WmX5slCNuHLi8bLeY9MK7whWMhyjYrEOXvQ-N.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Cormorant Garamond Medium'), local('CormorantGaramond-Medium'), url(https://fonts.gstatic.com/s/cormorantgaramond/v7/co3YmX5slCNuHLi8bLeY9MK7whWMhyjQWlhvuQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Cormorant Garamond Regular'), local('CormorantGaramond-Regular'), url(https://fonts.gstatic.com/s/cormorantgaramond/v7/co3bmX5slCNuHLi8bLeY9MK7whWMhyjorg.ttf) format('truetype');
+  src: local('Fira Sans Regular'), local('FiraSans-Regular'), url(https://fonts.gstatic.com/s/firasans/v10/va9E4kDNxMZdWfMOD5VfkA.ttf) format('truetype');
 }
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: italic;
-  font-weight: 200;
-  font-display: swap;
-  src: local('Fira Sans ExtraLight Italic'), local('FiraSans-ExtraLightItalic'), url(https://fonts.gstatic.com/s/firasans/v10/va9f4kDNxMZdWfMOD5VvkrAGQBf_.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: local('Fira Sans ExtraLight'), local('FiraSans-ExtraLight'), url(https://fonts.gstatic.com/s/firasans/v10/va9B4kDNxMZdWfMOD5VnWKnuQQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local('Fira Sans Light'), local('FiraSans-Light'), url(https://fonts.gstatic.com/s/firasans/v10/va9B4kDNxMZdWfMOD5VnPKruQQ.ttf) format('truetype');
+.wapper {
+  background-color: #faf9f9;
 }
 .font-common {
   font-family: 'Fira Sans', sans-serif;
@@ -84,13 +80,15 @@ html {
 }
 .header {
   width: 100%;
-  height: 100vh;
+  height: 93vh;
   background-image: url("/assets/images/16-home-jewelry-v2_01.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 1.2rem;
 }
 .header .nav {
+  height: 10vh;
   width: 100%;
   position: fixed;
   z-index: 1000;
@@ -98,22 +96,51 @@ html {
   justify-content: center;
 }
 .header .nav .nav-bar {
+  position: relative;
   width: 89.5vw;
-  padding-top: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.header .nav .nav-bar .logo {
+  position: absolute;
+  left: -1rem;
+  top: 3rem;
+}
+.header .nav .nav-bar .sign__icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  right: 1rem;
+}
+.header .nav .nav-bar .sign__icon .checkout__icon {
+  margin-right: 4.7rem;
+  margin-top: 1.1rem;
+  color: #ffffff;
+  font-size: 2.5rem;
+  position: relative;
+}
+.header .nav .nav-bar .sign__icon .cart_nu_count {
+  position: absolute;
+  top: -1rem;
+  right: -1.3rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: #333333;
+  text-align: center;
+  width: 2rem;
+  height: 2rem;
+  font-family: lato;
+}
 .header .header__container {
-  width: 89.5vw;
+  height: 100%;
+  width: 100%;
   position: relative;
 }
 .header .header__container .container-fluid {
   position: relative;
-}
-.logo img {
-  width: 175px;
-  height: 60px;
 }
 .back {
   background-color: #333333;
@@ -141,7 +168,7 @@ html {
 * Start navbar animation
 */
 .burger div {
-  width: 3rem;
+  width: 2rem;
   height: 0.1rem;
   background-color: #ffffff;
   margin: 0.5rem 0;
@@ -185,61 +212,36 @@ html {
 * End navbar animation
 */
 /*
-* Start CSS icon 
-*/
-.sign__icon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.sign__icon .checkout__icon {
-  margin-right: 2.5rem;
-  color: #ffffff;
-  font-size: 2.5rem;
-  position: relative;
-}
-.sign__icon .cart_nu_count {
-  position: absolute;
-  top: -1rem;
-  right: -1.3rem;
-  background-color: #ffffff;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  color: #333333;
-  text-align: center;
-  width: 2rem;
-  height: 2rem;
-  font-family: lato;
-}
-/*
-* End CSS icon 
-*/
-/*
 * Start CSS slider
 */
 .slider {
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.slider .slider__content {
+  position: absolute;
+  top: 34.1rem;
+  left: -1.5rem;
 }
 .seasion {
   font-size: 2.4rem;
   font-family: 'Fira Sans', sans-serif;
   line-height: 3.2rem;
   letter-spacing: 1.2rem;
-  font-weight: 400;
   color: #696969;
+  margin-bottom: 3.5rem;
 }
 .slider__caption {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 9.5rem;
-  line-height: 10rem;
-  letter-spacing: 3rem;
-  font-weight: 600;
+  font-size: 10rem;
   font-style: italic;
+  letter-spacing: 3rem;
+  line-height: 10rem;
   color: #333333;
-  margin: 2rem 0rem 3rem 0rem;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 5.4rem;
 }
 .button_discover {
   font-size: 1.6rem;
@@ -255,7 +257,8 @@ html {
 .social {
   text-align: end;
   position: absolute;
-  right: 15px;
+  right: -28.9rem;
+  top: 42.2rem;
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.4rem;
   line-height: 4rem;
@@ -287,29 +290,62 @@ html {
 /*
 * Reponsive 
 */
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 40%;
+@media screen and (max-width: 1919px) {
+  .slider .slider__content {
+    top: 20rem;
   }
-  .logo img {
-    width: 87.5px;
-    height: 30px;
+  .social {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .slider .slider__content {
+    left: 3.5rem;
+    top: 25rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  html {
+    font-size: 30%;
+  }
+  .header .nav .nav-bar .sign__icon .checkout__icon {
+    font-size: 4rem;
+  }
+  .header .nav .nav-bar .sign__icon .burger div {
+    width: 5rem;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 4px 0;
+  }
+  .slider .slider__content {
+    left: 10rem;
+    top: 35rem;
   }
   .slider__caption {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 6rem;
-    line-height: 9rem;
     letter-spacing: 1rem;
-    font-weight: 300;
   }
+}
+.space-padding {
+  padding-top: 3rem;
+  margin-bottom: 6.5rem;
 }
 .footer {
   background-color: #333333;
 }
+.footer .footer__wapper {
+  height: 100%;
+}
+.margin-line {
+  margin-bottom: 4rem;
+}
 .footer__content_top-menu {
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
 }
 .footer__content_top-menu .footer__content_top-menu-list {
   list-style: none;
@@ -322,7 +358,7 @@ html {
   justify-content: center;
 }
 .footer__content_top-menu .footer__content_top-menu-list .footer__content_top-menu-item {
-  margin: 0 1rem;
+  margin: 0 1.8rem;
   text-decoration: none;
   color: #696969;
   text-transform: uppercase;
@@ -332,8 +368,8 @@ html {
   color: #d6ba8d;
 }
 .footer__content_top-subscrice {
-  width: 90%;
-  height: 30%;
+  width: 80%;
+  height: 28%;
   border: 0.1rem solid #696969;
   font-size: 1.4rem;
   font-family: 'Fira Sans', sans-serif;
@@ -361,10 +397,13 @@ html {
   font-family: 'Fira Sans', sans-serif;
 }
 .wapper__span {
-  font-size: 1.8rem;
-  width: 3rem;
-  height: 3rem;
+  font-size: 2rem;
+  width: 4.5rem;
+  height: 4.5rem;
   color: #ababab;
+  border: 1px solid;
+  border-radius: 50%;
+  margin: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -382,28 +421,58 @@ html {
   height: 0.1rem;
   background-color: #242424;
 }
-@media screen and (max-width: 768px) {
+.footer__content_bottom-social {
+  top: -15px;
+}
+.footer__content_top-subscrice-icon {
+  font-size: 20px;
+  margin-left: 10px;
+  color: #d6ba8d;
+}
+.footer__end {
+  height: 7vh;
+}
+@media screen and (max-width: 1199px) {
   .footer__content_top-subscrice {
+    width: 100%;
     height: 100%;
   }
 }
-/*<-----------------------------------3.1 Home_page_content--------------------------------------------->*/
+@media screen and (max-width: 768px) {
+  .footer__content_top-subscrice {
+    width: 100%;
+    height: 100%;
+  }
+}
+.no-padding-lr {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.add-margin-row {
+  margin-left: -3rem;
+  margin-right: -3rem;
+}
 .container__home-page {
   width: 62.5vw;
   margin: auto;
 }
-.slogan {
-  background-color: #ffffff;
-  border-bottom: 0.01px solid #efefef;
+.text-center {
   text-align: center;
 }
-.slogan__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 0.01px solid #efefef;
+.text-end {
+  text-align: end;
 }
-.slogan__item-title {
+.fill-img {
+  width: 100%;
+}
+.slogan {
+  border-bottom: 0.1rem solid #efefef;
+}
+.slogan .slogan__item {
+  border: 0.1rem solid #efefef;
+  text-align: center;
+}
+.slogan .slogan__item .slogan__item-title {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.8rem;
   font-weight: 700;
@@ -413,7 +482,7 @@ html {
   letter-spacing: 0.2rem;
   color: #333333;
 }
-.slogan__item-detail {
+.slogan .slogan__item .slogan__item-detail {
   font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
   font-size: 1.4rem;
@@ -424,12 +493,11 @@ html {
   font-size: 3.4rem;
   line-height: 4.8rem;
   color: #333333;
-  font-weight: 600;
   font-family: 'Cormorant Garamond', serif;
   text-align: center;
   display: flex;
   justify-content: center;
-  margin: 14vh;
+  margin: 12rem 0;
 }
 /*
 *feature items 
@@ -437,13 +505,17 @@ html {
 .feature__items {
   width: 89.5vw;
   margin: 0 auto;
-  margin-bottom: 14vh;
+  margin-bottom: 11vh;
 }
 .feature__items .container-fluid {
   flex-wrap: wrap;
 }
+.feature__items .container-fluid .feature__items-top {
+  margin-bottom: 3rem;
+}
 .feature__items .container-fluid .feature__item-img--small,
 .feature__items .container-fluid .feature__item-img--big {
+  position: relative;
   transition: transform 0.5s;
 }
 .feature__items .container-fluid .feature__item-img--small:hover,
@@ -451,24 +523,194 @@ html {
   transform: scale(0.9);
 }
 @media (max-width: 576px) {
+  .feature__items {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .feature__items {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .feature__items {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
   .feature__item-img--big {
     order: -1;
+    margin-bottom: 3rem;
   }
 }
 @media (max-width: 768px) {
   .feature__item-img--big {
     order: -1;
+    margin-bottom: 3rem;
   }
 }
 @media (max-width: 992px) {
   .feature__item-img--big {
     order: -1;
+    margin-bottom: 3rem;
   }
+}
+@media (max-width: 1024px) {
+  .feature__item-img--big {
+    order: -1;
+    margin-bottom: 3rem;
+  }
+}
+@media (max-width: 1200px) {
+  .feature__item-img--big {
+    order: -1;
+    margin-bottom: 3rem;
+  }
+}
+.feature__item-img--small-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.feature__item-img--small-text .feature__item-img--small-text-wapper {
+  position: relative;
+}
+.feature__item-img--small-text .feature__item-img--small-text-wapper .feature__item-img--small-text-title {
+  font-size: 2.4rem;
+  letter-spacing: 0.1rem;
+  line-height: 3.6rem;
+  color: #333333;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  text-align: center;
+  position: relative;
+  top: 40.5rem;
+}
+.feature__item-img--small-text .feature__item-img--small-text-wapper .feature__item-img--small-text-price {
+  font-size: 2.4rem;
+  letter-spacing: 0.1rem;
+  line-height: 3.6rem;
+  color: #d6ba8d;
+  font-weight: 700;
+  font-family: 'Cormorant Garamond', serif;
+  text-align: center;
+  position: relative;
+  top: 41.5rem;
+}
+.feature__item-img--small-text .feature__item-img--small-text-wapper .feature__item-img--small-text-title-collection {
+  position: absolute;
+  left: 6.5rem;
+  top: 33.5rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.3rem;
+  line-height: 2.4rem;
+  color: #333333;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+}
+.feature__item-img--small-text .feature__item-img--small-text-wapper .feature__item-img--small-text-toppic-collection {
+  position: absolute;
+  left: 6rem;
+  top: 39.2rem;
+  font-size: 7.2rem;
+  line-height: 4.7rem;
+  color: #d6ba8d;
+  font-weight: 700;
+  font-family: 'Cormorant Garamond', serif;
+  text-align: center;
+}
+.feature__item-img--big-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.feature__item-img--big-text .feature__item-img--big-text-frame {
+  height: 65%;
+  width: 32%;
+  border: 0.4rem solid #ffffff;
+  position: absolute;
+  top: 8.8rem;
+  right: 6.3rem;
+}
+.feature__item-img--big-text .feature__item-img--big-text-frame .feature__item-img--big-text-frame-transparent {
+  height: 100%;
+  background-image: linear-gradient(to top right, #ffffff, #ffffff 50%, transparent 50%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.feature__item-img--big-text .feature__item-img--big-text-frame .feature__item-img--big-text-frame-transparent .feature__item-img--big-text-frame-content {
+  width: 85%;
+  height: 90%;
+}
+.feature__item-img--big-text .feature__item-img--big-text-frame .feature__item-img--big-text-frame-transparent .feature__item-img--big-text-frame-content .feature__item-img--big-text-frame-content-item1 {
+  font-size: 1.8rem;
+  letter-spacing: 0.4rem;
+  line-height: 6.4rem;
+  color: #333333;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  text-align: center;
+  margin-bottom: 2.8rem;
+}
+.feature__item-img--big-text .feature__item-img--big-text-frame .feature__item-img--big-text-frame-transparent .feature__item-img--big-text-frame-content .feature__item-img--big-text-frame-content-item2 {
+  font-size: 10rem;
+  line-height: 3.6rem;
+  color: #333333;
+  font-weight: 700;
+  font-family: "Cormorant Garamond";
+  text-align: center;
+  margin-bottom: 3.6rem;
+}
+.feature__item-img--big-text .feature__item-img--big-text-frame .feature__item-img--big-text-frame-transparent .feature__item-img--big-text-frame-content .feature__item-img--big-text-frame-content-item3 {
+  font-size: 2.4rem;
+  line-height: 6.4rem;
+  color: #696969;
+  font-weight: 700;
+  font-family: "Cormorant Garamond";
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.feature__item-img--big-text .feature__item-img--big-text-frame .feature__item-img--big-text-frame-transparent .feature__item-img--big-text-frame-content .feature__item-img--big-text-frame-content-item4 {
+  font-size: 1.4rem;
+  letter-spacing: 0.3rem;
+  line-height: 6.4rem;
+  color: #696969;
+  font-weight: 700;
+  font-family: 'Fira Sans', sans-serif;
+  text-align: center;
+}
+.feature__item-img--big-text .feature__item-img--big-text-wapper {
+  position: absolute;
+  top: 14.5rem;
+  left: 7.5rem;
+}
+.feature__item-img--big-text .feature__item-img--big-text-wapper .feature__item-img--big-text-wapper--title {
+  width: 29.6rem;
+  height: 13.1rem;
+  font-size: 4.8rem;
+  line-height: 5.6rem;
+  color: #333333;
+  font-weight: 700;
+  font-family: 'Cormorant Garamond', serif;
+}
+.feature__item-img--big-text .feature__item-img--big-text-wapper .feature__item-img--big-text-wapper--detail {
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  line-height: 2.4rem;
+  color: #696969;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
 }
 /*
 *feature product 
 */
 .feature__product-content-title {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 8vh;
@@ -477,6 +719,7 @@ html {
   color: #333333;
   font-weight: 700;
   font-family: 'Cormorant Garamond', serif;
+  position: relative;
 }
 .feature__product-content-title .fi {
   font-size: 5.6rem;
@@ -485,7 +728,6 @@ html {
   line-height: 2.8rem;
 }
 .feature__product-content-title .vm {
-  font-size: 14px;
   letter-spacing: 0.2rem;
   color: #333333;
   font-weight: 700;
@@ -495,12 +737,16 @@ html {
   text-transform: uppercase;
   text-decoration: none;
   color: #696969;
+  position: absolute;
+  right: 1.3rem;
+  top: 1.6rem;
 }
 .feature__product-content-title .vm:hover {
   text-decoration: none;
   color: #d6ba8d;
 }
 .feature__product-content-title .vm > .iconify {
+  font-size: 2rem;
   color: #d6ba8d;
 }
 .product__content {
@@ -512,10 +758,17 @@ html {
   display: flex;
   justify-content: space-between;
   opacity: 0;
+  display: none;
 }
 .product__content .bottom__menu .add__to-cart {
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  line-height: 2.3rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: 'Fira Sans', sans-serif;
   background-color: #d6ba8d;
-  width: 50%;
+  width: 60%;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
@@ -564,10 +817,12 @@ html {
   background: url('https://api.iconify.design/dashicons:arrow-right-alt2.svg') no-repeat center center / contain;
 }
 .product__content:hover .bottom__menu {
-  height: 50%;
+  display: inline-flex;
+  height: 60%;
   position: absolute;
-  top: -50%;
+  top: -60%;
   opacity: 1;
+  transition: 1s;
 }
 .product__content .product__content_title-text {
   position: relative;
@@ -580,6 +835,8 @@ html {
   color: #333333;
   font-size: 1.4rem;
   line-height: 3.6rem;
+  position: relative;
+  top: 0.8rem;
 }
 .product__content .product__content_price {
   display: flex;
@@ -591,6 +848,8 @@ html {
   text-align: center;
   font-size: 1.8rem;
   line-height: 3.6rem;
+  position: relative;
+  top: -1rem;
 }
 .icon__direction {
   background-image: url("/assets/images/16-home-jewelry-v2_01.jpg");
@@ -604,25 +863,32 @@ html {
   top: 5rem;
   right: 5rem;
   left: 5rem;
-  background-color: blueviolet;
+  background-color: white;
   z-index: 600;
+}
+.space-between {
+  margin-top: 3.5rem;
 }
 .blog__update .blog__update-title {
   color: #333333;
   font-weight: 700;
   text-align: center;
-  margin: 8vh;
+  margin-top: 9.5rem;
+  margin-bottom: 6.5rem;
   font-size: 5.6rem;
   font-family: 'Cormorant Garamond', serif;
   line-height: 2.8rem;
 }
+.blog__update .blog__content {
+  background-color: #ffffff;
+}
 .blog__update .blog__content .blog__content_des {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  width: 82%;
+  margin: auto;
 }
 .blog__update .blog__content .blog__content_des .blog__content_des-date {
-  font-size: 14px;
   color: #cccccc;
   font-size: 1.4rem;
   letter-spacing: 0.1rem;
@@ -638,7 +904,7 @@ html {
   font-size: 2.4rem;
   font-family: 'Cormorant Garamond', serif;
   line-height: 3.2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 6.2rem;
   text-decoration: none;
   color: #696969;
 }
@@ -659,56 +925,146 @@ html {
   font-family: 'Fira Sans', sans-serif;
   font-weight: bold;
   line-height: 3.2rem;
-  margin: 2rem;
+  width: 82%;
+  margin: auto;
 }
-.blog__update .blog__content .blog__content_des-social .blog__content_des-social-view,
-.blog__update .blog__content .blog__content_des-social .blog__content_des-social-like {
+.blog__update .blog__content .blog__content_des-social .blog__content_des-social-icon-like {
+  margin-left: 2.2rem;
+  margin-right: 0.5rem;
+}
+.blog__update .blog__content .blog__content_des-social .blog__content_des-social-like,
+.blog__update .blog__content .blog__content_des-social .blog__content_des-social-view {
   font-size: 1.4rem;
   line-height: 3.2rem;
   color: #696969;
   font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
+  margin-left: 1rem;
 }
-.blog__update .blog__content .blog__content_des-social .blog__content_des-social-view > .iconify {
-  color: #92c5d9;
-}
-.blog__update .blog__content .blog__content_des-social .blog__content_des-social-like > .iconify {
+.blog__update .blog__content .blog__content_des-social .blog__content_des-social-icon-like,
+.blog__update .blog__content .blog__content_des-social .blog__content_des-social-icon-view {
   color: #92c5d9;
 }
 .blog__update .blog__update-redirect {
   text-align: center;
-  margin-top: 8vh;
-  margin-bottom: 14vh;
+  margin-top: 7.5vh;
+  margin-bottom: 15vh;
   font-size: 2.4rem;
   font-family: 'Cormorant Garamond', serif;
   line-height: 2.8rem;
 }
 .blog__update .blog__update-redirect .blog__update-redirect-link {
+  background-color: #ffffff;
   color: #333333;
   text-decoration: none;
+}
+/**
+Brand 
+*/
+.brand {
+  margin-bottom: 3.5rem;
 }
 .brand .brand__content-item {
   opacity: 0.5;
   transition: transform 1s;
-  padding: 2rem ;
+  padding: 2rem;
 }
 .brand .brand__content-item:hover {
   transform: scale(1.2);
   opacity: 1;
 }
-@media screen and (max-width: 768px) {
-  .social {
-    display: none;
+@media screen and (max-width: 1400px) {
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
   }
-  .container__home-page {
-    border: 3px solid yellow;
-    width: 100%;
+  .feature__item-img--small-text .feature__item-img--small-text-wapper .feature__item-img--small-text-title {
+    top: 30rem;
+  }
+  .feature__item-img--small-text .feature__item-img--small-text-wapper .feature__item-img--small-text-price {
+    top: 30rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .slogan .slogan__item .slogan__item-title {
+    font-size: 35px;
+  }
+  .slogan .slogan__item .slogan__item-detail {
+    font-size: 20px;
+  }
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header .nav .nav-bar .logo {
+    top: 1rem;
+  }
+  .slogan .slogan__item .slogan__item-title {
+    font-size: 18px;
+  }
+  .slogan .slogan__item .slogan__item-detail {
+    font-size: 15px;
   }
   .preamble__main {
-    font-weight: 300;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin: 2.8vh 0;
+    font-size: 4rem;
+  }
+  .feature__item-img--big-text .feature__item-img--big-text-frame .feature__item-img--big-text-frame-transparent .feature__item-img--big-text-frame-content .feature__item-img--big-text-frame-content-item1 {
+    line-height: 0;
+  }
+  .feature__item-img--big-text .feature__item-img--big-text-frame .feature__item-img--big-text-frame-transparent .feature__item-img--big-text-frame-content .feature__item-img--big-text-frame-content-item2 {
+    line-height: 5.6rem;
+  }
+  .feature__item-img--big-text .feature__item-img--big-text-frame .feature__item-img--big-text-frame-transparent .feature__item-img--big-text-frame-content .feature__item-img--big-text-frame-content-item3 {
+    line-height: 3.4rem;
+  }
+  .feature__item-img--big-text .feature__item-img--big-text-frame .feature__item-img--big-text-frame-transparent .feature__item-img--big-text-frame-content .feature__item-img--big-text-frame-content-item4 {
+    line-height: 0.4rem;
+  }
+  .feature__item-img--small-text .feature__item-img--small-text-wapper .feature__item-img--small-text-title {
+    top: 36.5rem;
+  }
+  .feature__item-img--small-text .feature__item-img--small-text-wapper .feature__item-img--small-text-price {
+    top: 36.5rem;
+  }
+  .product__content {
+    margin-bottom: 50px;
+  }
+  .product__content .product__content_title {
+    font-size: 3.4rem;
+  }
+  .product__content .product__content_price {
+    font-size: 5.5rem;
+    margin: 20px;
+  }
+  .product__content .bottom__menu .add__to-cart {
+    font-size: 3rem;
+  }
+  .whishlist,
+  .compare,
+  .quick__view {
+    font-size: 13px;
+  }
+  .feature__product-content-title .vm {
+    font-size: 2.4rem;
+  }
+  .blog__update .blog__content {
+    margin-bottom: 30px;
+  }
+  .blog__update .blog__content .blog__content_des .blog__content_des-date {
+    font-size: 2rem;
+  }
+  .blog__update .blog__content .blog__content_des .blog__content_des-title {
+    font-size: 3.4rem;
+  }
+  .blog__update .blog__content .blog__content_des-social {
+    font-size: 3.4rem;
   }
 }
