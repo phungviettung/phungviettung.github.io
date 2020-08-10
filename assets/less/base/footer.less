@@ -22,9 +22,9 @@
 
     .footer__content_top-menu-list {
         .listStyle();
-        font-size     : 1.4rem;
-        letter-spacing: 0.1rem;
-        line-height   : 2.4rem;
+        font-size     : 14px;
+        letter-spacing: 1px;
+        line-height   : 24px;
         font-weight   : 700;
         .font-common();
         .flex();
@@ -42,13 +42,13 @@
 .footer__content_top-subscrice {
     width    : 80%;
     height   : 28%;
-    border   : 0.1rem solid @color-menu ;
-    font-size: 1.4rem;
+    border   : 1px solid @color-menu ;
+    font-size: 14px;
     .font-common();
-    font-weight      : 700;
-    line-height      : 2.4rem;
-    letter-spacing   : 0.2rem;
-    color            : @color-slogan-detail;
+    font-weight   : 700;
+    line-height   : 24px;
+    letter-spacing: 2px;
+    color         : @color-slogan-detail;
     .flex();
     .flex-justify-content(center);
     .flex-align-items(center);
@@ -65,8 +65,8 @@
 }
 
 .footer__content_bottom-left {
-    font-size  : 1.4rem;
-    line-height: 2.8rem;
+    font-size  : 14px;
+    line-height: 28px;
     color      : @color-menu;
     font-weight: 400;
     .font-common()
@@ -111,7 +111,7 @@
     color      : @color-common;
 }
 
-.footer__end{
+.footer__end {
     height: 7vh;
 }
 
@@ -129,5 +129,49 @@
         width : 100%;
         height: 100%;
     }
-    
+
+}
+
+@media screen and (max-width: 576px) {
+    .footer__content_top-menu {
+        margin-top   : 40px;
+        margin-bottom: 40px;
+
+        .footer__content_top-menu-list {
+            flex-wrap: wrap;
+
+            .footer__content_top-menu-item {
+                padding  : 8px 0;
+            }
+        }
+    }
+
+    .margin-line {
+        margin-top   : 50px;
+        margin-bottom: 50px;
+    }
+
+    .footer__content_top-subscrice {
+        height   : 150%;
+    }
+
+    .footer__content_bottom-left {
+        text-align: center;
+
+        .footer__content_bottom-address {
+            margin-bottom: 10px;
+        }
+    }
+
+    .footer__content_bottom-social {
+        margin-top     : 30px;
+        justify-content: center;
+    }
+
+    .wapper__span {
+        width    : 30px;
+        height   : 30px;
+        font-size: 15px;
+    }
+
 }

@@ -48,8 +48,8 @@
         .slogan__item-detail {
             font-weight: 400;
             .font-common();
-            font-size  : 1.4rem;
-            line-height: 2.8rem;
+            font-size  : 14px;
+            line-height: 28px;
             color      : @color-slogan-detail;
         }
     }
@@ -172,9 +172,9 @@
             position      : absolute;
             left          : 6.5rem;
             top           : 33.5rem;
-            font-size     : 1.4rem;
-            letter-spacing: 0.3rem;
-            line-height   : 2.4rem;
+            font-size     : 14px;
+            letter-spacing: 3px;
+            line-height   : 24px;
             color         : @color-button;
             font-weight   : 400;
             .font-common();
@@ -253,9 +253,9 @@
                 }
 
                 .feature__item-img--big-text-frame-content-item4 {
-                    font-size     : 1.4rem;
-                    letter-spacing: 0.3rem;
-                    line-height   : 6.4rem;
+                    font-size     : 14px;
+                    letter-spacing: 3px;
+                    line-height   : 64px;
                     color         : #696969;
                     font-weight   : 700;
                     .font-common();
@@ -281,9 +281,9 @@
         }
 
         .feature__item-img--big-text-wapper--detail {
-            font-size     : 1.4rem;
-            letter-spacing: 0.1rem;
-            line-height   : 2.4rem;
+            font-size     : 14px;
+            letter-spacing: 1px;
+            line-height   : 24px;
             color         : #696969;
             font-weight   : 400;
             .font-common();
@@ -314,13 +314,12 @@
     }
 
     .vm {
-        font-size     : 1.4rem;
-        letter-spacing: 0.2rem;
+        font-size     : 14px;
+        letter-spacing: 2px;
         color         : @color-button ;
         font-weight   : 700;
-        font-size     : 1.4rem;
         .font-common();
-        line-height   : 2.4rem;
+        line-height   : 24px;
         text-transform: uppercase;
         .linkStyle();
         position: absolute;
@@ -347,9 +346,9 @@
         display: none;
 
         .add__to-cart {
-            font-size     : 1.4rem;
-            letter-spacing: 0.1rem;
-            line-height   : 2.3rem;
+            font-size     : 14px;
+            letter-spacing: 1px;
+            line-height   : 23px;
             color         : @burger-color;
             font-weight   : 700;
             .font-common();
@@ -369,8 +368,7 @@
             .flex();
             .flex-justify-content(center);
             .flex-align-items(center);
-            opacity: 0.9;
-            margin : 0 0.1rem;
+            margin: 0 0.1rem;
         }
 
         .right-menu {
@@ -378,14 +376,17 @@
             .flex();
 
             .whishlist {
+                font-size: 18px;
                 .icon()
             }
 
             .compare {
+                font-size: 18px;
                 .icon()
             }
 
             .quick__view {
+                font-size: 18px;
                 .icon()
             }
         }
@@ -417,14 +418,14 @@
     }
 
     .product__content_title {
-        letter-spacing: 0.1rem;
+        letter-spacing: 1px;
         color         : @color-button;
         font-weight   : 400;
         text-align    : center;
         .font-common();
         color      : @color-button;
-        font-size  : 1.4rem;
-        line-height: 3.6rem;
+        font-size  : 14px;
+        line-height: 36px;
         position   : relative;
         top        : 0.8rem
     }
@@ -496,12 +497,12 @@
             margin        : auto;
 
             .blog__content_des-date {
-                font-size     : 1.4rem;
+                font-size     : 14px;
                 color         : @color-blog-date;
-                font-size     : 1.4rem;
-                letter-spacing: 0.1rem;
+                font-size     : 14px;
+                letter-spacing: 1px;
                 .font-common();
-                line-height: 2.4rem;
+                line-height: 24px;
                 margin     : @magin-blog 0;
             }
 
@@ -528,7 +529,7 @@
 
         .blog__content_des-social {
             .flex();
-            font-size: 1.4rem;
+            font-size: 14px;
             .font-common();
             font-weight: bold;
             line-height: 3.2rem;
@@ -542,7 +543,7 @@
 
             .blog__content_des-social-like,
             .blog__content_des-social-view {
-                font-size  : 1.4rem;
+                font-size  : 14px;
                 line-height: 3.2rem;
                 color      : @color-menu;
                 font-weight: 400;
@@ -611,6 +612,37 @@ Brand
         }
     }
 
+    .feature__item-img--big-text .feature__item-img--big-text-frame .feature__item-img--big-text-frame-transparent .feature__item-img--big-text-frame-content {
+        .feature__item-img--big-text-frame-content-item1 {
+            line-height: 0;
+        }
+
+        .feature__item-img--big-text-frame-content-item2 {
+            line-height: 5.6rem;
+        }
+
+        .feature__item-img--big-text-frame-content-item3 {
+            line-height: 28px;
+        }
+
+        .feature__item-img--big-text-frame-content-item4 {
+            line-height: 0px;
+        }
+    }
+
+    .feature__item-img--small-text .feature__item-img--small-text-wapper {
+        .feature__item-img--small-text-title-collection {
+            top: 200px;
+            left: 38px;
+        }
+
+        .feature__item-img--small-text-toppic-collection {
+            font-size: 60px;
+            top: 278px;
+            left: 38px;
+        }
+    }
+
 }
 
 @media screen and (max-width: 992px) {
@@ -626,9 +658,9 @@ Brand
             font-size: 35px;
         }
 
-        .slogan__item-detail {
-            font-size: 20px;
-        }
+        // .slogan__item-detail {
+        //     font-size: 20px;
+        // }
     }
 
     .row {
@@ -646,15 +678,12 @@ Brand
         .slogan__item-title {
             font-size: 18px;
         }
-
-        .slogan__item-detail {
-            font-size: 15px;
-        }
     }
 
     .preamble__main {
         font-size: 4rem;
     }
+
 
     .feature__item-img--big-text .feature__item-img--big-text-frame .feature__item-img--big-text-frame-transparent .feature__item-img--big-text-frame-content {
         .feature__item-img--big-text-frame-content-item1 {
@@ -670,28 +699,39 @@ Brand
         }
 
         .feature__item-img--big-text-frame-content-item4 {
-            line-height: 0.4rem;
+            line-height: 20px;
         }
     }
 
     .feature__item-img--small-text .feature__item-img--small-text-wapper {
         .feature__item-img--small-text-title {
+            font-size: 14px;
             top: 36.5rem;
         }
 
         .feature__item-img--small-text-price {
+            font-size: 14px;
             top: 36.5rem;
         }
 
     }
 
+    .feature__item-img--small-text .feature__item-img--small-text-wapper {
+        .feature__item-img--small-text-title-collection {
+            top: 88px;
+        }
+
+        .feature__item-img--small-text-toppic-collection {
+            top: 150px;
+            left: 24px;
+        }
+    }
+
+
+
 
     .product__content {
         margin-bottom: 50px;
-
-        .product__content_title {
-            font-size: 3.4rem;
-        }
 
         .product__content_price {
             font-size: 5.5rem;
@@ -699,33 +739,31 @@ Brand
         }
     }
 
-    .product__content .bottom__menu .add__to-cart {
-        font-size: 3rem;
-    }
+    
 
     .whishlist,
     .compare,
     .quick__view {
         font-size: 13px;
     }
-    .feature__product-content-title .vm {
-        font-size: 2.4rem;
-    }
+
+   
+
     .blog__update .blog__content {
         margin-bottom: 30px;
 
     }
 
-    .blog__update .blog__content .blog__content_des .blog__content_des-date {
-        font-size: 2rem;
-    }
-
     .blog__update .blog__content .blog__content_des .blog__content_des-title {
-        font-size: 3.4rem;
+        font-size     : 20px;
+        letter-spacing: 1px;
+        line-height   : 32px;
+        margin-bottom : 32px;
     }
 
-    .blog__update .blog__content .blog__content_des-social {
-        font-size: 3.4rem;
+    .blog__update .blog__update-redirect {
+        font-size  : 20px;
+        line-height: 28px;
     }
 
 }
