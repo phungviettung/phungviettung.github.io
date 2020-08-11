@@ -114,8 +114,7 @@ html {
 
             .logo {
                 position: absolute;
-                left    : -1rem;
-                top     : 3rem;
+                top     : 0.5rem;
             }
 
             .sign__icon {
@@ -126,6 +125,10 @@ html {
                 right   : 1rem;
 
                 .checkout__icon {
+                    a {
+                        color: @burger-color;
+                    }
+
                     margin-right: 4.7rem;
                     margin-top  : 1.1rem;
                     color       : @burger-color;
@@ -188,7 +191,7 @@ html {
 
 
 
-        // width: 100%;
+// width: 100%;
 /*
 * Start navbar animation
 */
@@ -237,7 +240,7 @@ html {
 
 
 .burger {
-    cursor    : pointer;
+    cursor: pointer;
 }
 
 /*
@@ -290,6 +293,7 @@ html {
     text-transform: uppercase;
     .btnDis();
     .font-common;
+    cursor: pointer;
 }
 
 .social {
@@ -344,8 +348,8 @@ html {
 
 @media screen and (max-width: 992px) {
     .slider .slider__content {
-        left    : 3.5rem;
-        top     : 25rem;
+        left: 3.5rem;
+        top : 25rem;
     }
 }
 

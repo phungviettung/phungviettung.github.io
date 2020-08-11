@@ -104,8 +104,7 @@ html {
 }
 .header .nav .nav-bar .logo {
   position: absolute;
-  left: -1rem;
-  top: 3rem;
+  top: 0.5rem;
 }
 .header .nav .nav-bar .sign__icon {
   display: flex;
@@ -120,6 +119,9 @@ html {
   color: #ffffff;
   font-size: 2.5rem;
   position: relative;
+}
+.header .nav .nav-bar .sign__icon .checkout__icon a {
+  color: #ffffff;
 }
 .header .nav .nav-bar .sign__icon .cart_nu_count {
   position: absolute;
@@ -253,6 +255,7 @@ html {
   width: 19.7rem;
   height: 4.8rem;
   font-family: 'Fira Sans', sans-serif;
+  cursor: pointer;
 }
 .social {
   text-align: end;
@@ -362,6 +365,7 @@ html {
   text-decoration: none;
   color: #696969;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .footer__content_top-menu .footer__content_top-menu-list .footer__content_top-menu-item:hover {
   text-decoration: none;
@@ -381,6 +385,7 @@ html {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .footer__content_top-subscrice:hover {
   background-color: #d6ba8d;
@@ -407,6 +412,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .wapper__span:hover {
   border-radius: 50%;
@@ -808,6 +814,7 @@ html {
   justify-content: center;
   align-items: center;
   margin: 0 0.1rem;
+  cursor: pointer;
 }
 .product__content .bottom__menu .right-menu {
   width: 50%;
@@ -822,6 +829,7 @@ html {
   justify-content: center;
   align-items: center;
   margin: 0 0.1rem;
+  cursor: pointer;
 }
 .product__content .bottom__menu .right-menu .compare {
   font-size: 18px;
@@ -832,6 +840,7 @@ html {
   justify-content: center;
   align-items: center;
   margin: 0 0.1rem;
+  cursor: pointer;
 }
 .product__content .bottom__menu .right-menu .quick__view {
   font-size: 18px;
@@ -842,6 +851,7 @@ html {
   justify-content: center;
   align-items: center;
   margin: 0 0.1rem;
+  cursor: pointer;
 }
 .product__content:hover .carousel-control-prev-icon {
   background: url('https://api.iconify.design/dashicons:arrow-left-alt2.svg') no-repeat center center / contain;
@@ -860,6 +870,9 @@ html {
 }
 .product__content .product__content_title-text {
   position: relative;
+}
+.product__content .product__content_title-text a {
+  text-decoration: none;
 }
 .product__content .product__content_title {
   letter-spacing: 1px;
@@ -921,6 +934,9 @@ html {
   flex-direction: column;
   width: 82%;
   margin: auto;
+}
+.blog__update .blog__content .blog__content_des a {
+  text-decoration: none;
 }
 .blog__update .blog__content .blog__content_des .blog__content_des-date {
   color: #cccccc;

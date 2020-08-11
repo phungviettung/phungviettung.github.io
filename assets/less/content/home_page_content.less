@@ -359,6 +359,7 @@
             .flex-justify-content(center);
             .flex-align-items(center);
             margin: 0 0.1rem;
+            cursor: pointer;
         }
 
         .icon() {
@@ -377,17 +378,20 @@
 
             .whishlist {
                 font-size: 18px;
-                .icon()
+                .icon();
+                cursor: pointer;
             }
 
             .compare {
                 font-size: 18px;
-                .icon()
+                .icon();
+                cursor: pointer;
             }
 
             .quick__view {
                 font-size: 18px;
-                .icon()
+                .icon();
+                cursor: pointer;
             }
         }
     }
@@ -414,6 +418,9 @@
 
 
     .product__content_title-text {
+        a{
+            text-decoration: none;
+        }
         position: relative;
     }
 
@@ -495,7 +502,9 @@
             flex-direction: column;
             width         : 82%;
             margin        : auto;
-
+            a{
+                text-decoration : none;
+            }
             .blog__content_des-date {
                 font-size     : 14px;
                 color         : @color-blog-date;
